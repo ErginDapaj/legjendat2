@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    user-select: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #434c50;
+    height: 100%;
+    font: normal 16px sans-serif;
+    padding: 60px 70px;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.container {
+    background-color: #fff;
+    height: 100%;
+    padding: 30px 50px;
+}
+
+.container h1 {
+    font-size: 40px;
+    color: #35373a;
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Droid Sans', sans-serif;
+    font-weight: 700;
+}
+
+.container .description {
+    font-family: 'Droid Sans', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    margin: 25px auto;
+    font-size: 18px;
+    color: #999;
+}
+
+button {
+    cursor: pointer;
+}
+
+#row {
+    margin-top: 1rem;
+    width: 100%;
+    padding: 100px 0;
+    background-color: transparent;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(150px, 1fr));
+    grid-template-rows: 1fr;
+    grid-gap: 30px;
+}
+
+.settings {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 4px 4px 15px rgb(0, 0, 0);
+}
+
+.project {
+    position: relative;
+    background: transparent;
+    overflow: hidden;
+}
+
+.project img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+    opacity: 0.9;
+}
+
+.project:hover .grid {
+    transform: translateY(0%);
+}
+
+.grid {
+    background-color: rgba(11, 72, 163, 0.8);
+    height: 100%;
+    width: 100%;
+    grid-column: -1;
+    grid-row: -1;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    position: absolute;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    transform: translateY(101%);
+    transition: .3s ease-in-out;
+}
+
+.grid button {
+    background: none;
+    outline: none;
+    font-weight: 100;
+    letter-spacing: 2px;
+    border: 1px solid #fff;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+.grid button:hover {
+    transition: all 0.3s ease-in-out;
+    background: #fff;
+    color: #4d4d4d;
+}
+
+.overlay {
+    position: fixed;
+    background: rgba(71, 69, 69, 0.7);
+    backdrop-filter: blur(20px);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: none;
+    z-index: 100;
+    padding: 20px 0;
+}
+
+.open {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+.overlay-inner {
+    background: #fff;
+    padding: 40px;
+    position: relative;
+    opacity: 1;
+}
+
+.close {
+    position: absolute;
+    top: 3px;
+    right: 10px;
+    background: none;
+    outline: none;
+    border: 0;
+}
+
+.close i {
+    color: #35373a;
+    padding: 5px;
+}
+
+.close i:hover {
+    color: #fff;
+    background: #35373a;
+}
+
+.likes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+#like-buton {
+    background: none;
+    border: none;
+    outline: none;
+    color: #000;
+    font-size: 25px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+
+/* #input1 {
+    width: 50px;
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 20px;
+    pointer-events: none;
+} */
+
+.likes .num {
+    position: relative;
+    color: #35373a;
+    font-size: 20px;
+    font-family: 'Droid Sans', sans-serif;
+    font-weight: 400;
+}
+
+#like-buton:hover {
+    color: #f00;
+    transform: scale(1.1);
+    transition: all .3s ease-in-out;
+}
+
+.clicked {
+    color: #f00;
+}
+
+@media screen and (max-width: 1000px) {
+    #row {
+        grid-template-columns: repeat(2, minmax(150px, 1fr));
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #like-buton:hover {
+        color: unset;
+        transform: unset;
+        transition: all 0s ease-in-out;
+    }
+    .project:hover .grid {
+        transform: unset;
+    }
+    .grid {
+        background-color: rgba(11, 72, 163, 0.452);
+        transform: translateY(0%);
+        transition: 0s ease-in-out;
+    }
+    .grid button:hover {
+        transition: all 0s ease-in-out;
+        background: unset;
+        color: #fff;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #row {
+        grid-template-columns: repeat(1, minmax(150px, 1fr));
+    }
+    .overlay {
+        padding: 30px;
+    }
+    .overlay-inner {
+        padding: 25px;
+    }
+    .overlay-inner img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    body {
+        padding: 0 0;
+    }
+    #row {
+        grid-template-columns: repeat(1, minmax(150px, 1fr));
+    }
+    .overlay {
+        padding: 30px 5px;
+    }
+    .overlay-inner {
+        padding: 25px 5px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .container h1 {
+        font-size: 30px;
+    }
+}
