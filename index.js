@@ -42,3 +42,38 @@ btn.addEventListener('click', () => {
         heart.classList.add('clicked');
     }
 })
+
+//FOTOT HAHAHAHAH
+fetch('./fotot.json')
+    .then(response => response.json())
+    .then(data => {
+        console.log(data.fotot.length)
+        for (let i = 0; i < data.fotot.length; i++) {
+            console.log(data.fotot[i].url);
+            console.log(i)
+            let div1 = document.createElement('div');
+            div1.id = [i];
+            div1.className = 'settings'
+
+            let div2 = document.createElement('div');
+            div2.className = 'project'
+
+            let img = document.createElement('img');
+            img.src = data.fotot[i].url
+            img.alt = data.fotot[i].likes
+            img.className = 'image'
+
+            let div3 = documen.createElement('div');
+            div3.className = 'grid'
+            let button = document.createElement('button');
+            button.className = "full-img"
+            document.getElementById('row').appendChild(div1);
+            document.getElementsByClassName('settings').appendChild(div2);
+            document.getElementsByClassName('project').appendChild(img)
+            document.getElementsByClassName('project').appendChild(div3)
+            document.getElementById('grid').appendChild(button)
+
+        }
+
+    })
+    .catch(error => console.log(error));
