@@ -181,14 +181,14 @@ button {
 }
 
 
-#input1 {
+/* #input1 {
     width: 50px;
     border: none;
     background: none;
     outline: none;
     font-size: 20px;
     pointer-events: none;
-}
+} */
 
 .likes .num {
     position: relative;
