@@ -63,7 +63,7 @@ fetch('./fotot.json')
             img.alt = data.fotot[i].likes
             img.className = 'image'
 
-            let div3 = documen.createElement('div');
+            let div3 = document.createElement('div');
             div3.className = 'grid'
             let button = document.createElement('button');
             button.className = "full-img"
