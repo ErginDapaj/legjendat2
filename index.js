@@ -57,6 +57,7 @@ fetch('./fotot.json')
 
             let div2 = document.createElement('div');
             div2.className = 'project'
+            div2.id = 'div2'
 
             let img = document.createElement('img');
             img.src = data.fotot[i].url
@@ -65,13 +66,14 @@ fetch('./fotot.json')
 
             let div3 = document.createElement('div');
             div3.className = 'grid'
+            div3.id = 'grid'
             let button = document.createElement('button');
             button.className = "full-img"
             document.getElementById('row').appendChild(div1);
-            document.getElementByClassName('settings').appendChild(div2);
-            document.getElementByClassName('project').appendChild(img)
-            document.getElementByClassName('project').appendChild(div3)
-            document.getElementById('grid').appendChild(button)
+            document.getElementById([i]).appendChild(div2);
+            document.getElementById('div2').appendChild(img);
+            document.getElementById('div2').appendChild(div3);
+            document.getElementById('grid').appendChild(button);
 
         }
 
