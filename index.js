@@ -68,9 +68,9 @@ fetch('./fotot.json')
             let button = document.createElement('button');
             button.className = "full-img"
             document.getElementById('row').appendChild(div1);
-            document.getElementsByClassName('settings').appendChild(div2);
-            document.getElementsByClassName('project').appendChild(img)
-            document.getElementsByClassName('project').appendChild(div3)
+            document.getElementByClassName('settings').appendChild(div2);
+            document.getElementByClassName('project').appendChild(img)
+            document.getElementByClassName('project').appendChild(div3)
             document.getElementById('grid').appendChild(button)
 
         }
