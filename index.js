@@ -19,17 +19,17 @@ overlay.addEventListener('click', close);
 
 // ================== Like button class changes =======================
 
-// const likebtn = document.getElementById('like-buton');
-// const input1 = document.querySelectorAll('#input1');
-// const zemra = document.getElementById('heart');
+const likebtn = document.getElementById('like-buton');
+const input1 = document.getElementById('input1');
+const zemra = document.getElementById('heart');
 
-// likebtn.addEventListener('click', () => {
-//     if (zemra.classList.contains('clicked')) {
-//         input1.value = parseInt(input1.value) - 1;
-//     } else {
-//         input1.value = parseInt(input1.value) + 1;
-//     }
-// })
+likebtn.addEventListener('click', () => {
+    if (zemra.classList.contains('clicked')) {
+        input1.value = parseInt(input1.value) - 1;
+    } else {
+        input1.value = parseInt(input1.value) + 1;
+    }
+})
 
 
 const btn = document.getElementById('like-buton');

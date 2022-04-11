@@ -129,7 +129,7 @@ button {
     display: none;
     z-index: 100;
     padding: 20px 0;
-    overflow: hidden;
+    pointer-events: none;
 }
 
 .open {
@@ -159,6 +159,7 @@ button {
     background: none;
     outline: none;
     border: 0;
+    pointer-events: visible;
 }
 
 .close i {
@@ -188,15 +189,14 @@ button {
     transition: all .3s ease-in-out;
 }
 
-
-/* #input1 {
+#input1 {
     width: 50px;
     border: none;
     background: none;
     outline: none;
     font-size: 20px;
     pointer-events: none;
-} */
+}
 
 .likes .num {
     position: relative;
