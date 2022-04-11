@@ -73,7 +73,7 @@ button {
 }
 
 .project img {
-    height: 100%;
+    height: 60vh;
     width: 100%;
     object-fit: cover;
     position: relative;
@@ -129,6 +129,7 @@ button {
     display: none;
     z-index: 100;
     padding: 20px 0;
+    overflow: hidden;
 }
 
 .open {
@@ -142,6 +143,13 @@ button {
     padding: 40px;
     position: relative;
     opacity: 1;
+}
+
+.overlay-inner img {
+    width: 60vh;
+    height: 80vh;
+    object-fit: cover;
+    overflow: hidden;
 }
 
 .close {
@@ -246,9 +254,10 @@ button {
         padding: 25px;
     }
     .overlay-inner img {
-        width: 100%;
-        height: 100%;
+        width: 60vh;
+        height: 80vh;
         object-fit: cover;
+        overflow: hidden;
     }
 }
 
@@ -265,10 +274,22 @@ button {
     .overlay-inner {
         padding: 25px 5px;
     }
+    .overlay-inner img {
+        width: 50vh;
+        height: 60vh;
+        object-fit: cover;
+        overflow: hidden;
+    }
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 330px) {
     .container h1 {
         font-size: 30px;
+    }
+    .overlay-inner img {
+        width: 40vh;
+        height: 50vh;
+        object-fit: cover;
+        overflow: hidden;
     }
 }
