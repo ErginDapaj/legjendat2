@@ -196,6 +196,8 @@ button {
     outline: none;
     font-size: 20px;
     pointer-events: none;
+    overflow: hidden;
+    transform: translateX(30px);
 }
 
 .likes .num {
