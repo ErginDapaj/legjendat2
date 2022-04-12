@@ -135,4 +135,4 @@ setTimeout(function() {
             heart.classList.add("clicked");
         }
     });
-}, 100);
+}, 1000);

@@ -197,7 +197,7 @@ button {
     font-size: 20px;
     pointer-events: none;
     overflow: hidden;
-    transform: translateX(-80px);
+    transform: translateX(-85px);
 }
 
 .likes .num {
@@ -206,6 +206,7 @@ button {
     font-size: 20px;
     font-family: 'Droid Sans', sans-serif;
     font-weight: 400;
+    transform: translate(50px);
 }
 
 .like-button:hover {
