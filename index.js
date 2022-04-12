@@ -24,7 +24,7 @@ fetch("./fotot.json")
 
             let button = document.createElement("button");
             button.className = "full-img";
-            button.innerText = data.fotot[i].description;
+            button.innerText = "Full Image";
 
             let div4 = document.createElement("div");
             div4.className = "likes";
