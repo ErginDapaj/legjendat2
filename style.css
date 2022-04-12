@@ -179,7 +179,7 @@ button {
     padding: 10px 20px;
 }
 
-#like-buton {
+.like-button {
     background: none;
     border: none;
     outline: none;
@@ -189,7 +189,7 @@ button {
     transition: all .3s ease-in-out;
 }
 
-#input1 {
+.input1 {
     width: 50px;
     border: none;
     background: none;
@@ -197,7 +197,7 @@ button {
     font-size: 20px;
     pointer-events: none;
     overflow: hidden;
-    transform: translateX(30px);
+    transform: translateX(-80px);
 }
 
 .likes .num {
@@ -208,7 +208,7 @@ button {
     font-weight: 400;
 }
 
-#like-buton:hover {
+.like-button:hover {
     color: #f00;
     transform: scale(1.1);
     transition: all .3s ease-in-out;
@@ -225,7 +225,7 @@ button {
 }
 
 @media screen and (max-width: 900px) {
-    #like-buton:hover {
+    .like-button:hover {
         color: unset;
         transform: unset;
         transition: all 0s ease-in-out;
@@ -277,8 +277,8 @@ button {
         padding: 25px 5px;
     }
     .overlay-inner img {
-        width: 50vh;
-        height: 60vh;
+        width: 40vh;
+        height: 50vh;
         object-fit: cover;
         overflow: hidden;
     }
