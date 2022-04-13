@@ -212,13 +212,13 @@ button {
 }
 
 .like-button:hover {
-    color: #f00;
-    transform: scale(1.1);
+    transform: scale(0.5);
     transition: all .3s ease-in-out;
 }
 
 .clicked {
     color: #f00;
+    transform: scale(1);
 }
 
 @media screen and (max-width: 1000px) {
