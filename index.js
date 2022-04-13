@@ -36,7 +36,7 @@ fetch("./fotot.json")
 
             let ii = document.createElement("i");
             ii.className = "fa-solid fa-heart";
-            ii.id = data.fotot[i].url
+            ii.id = "heart";
 
             let p = document.createElement("p");
             p.className = "num";
@@ -50,16 +50,6 @@ fetch("./fotot.json")
             input.name = "Likes";
             input.className = "input1";
 
-            button2.addEventListener("click", () => {
-                if (ii.classList.contains("clicked")) {
-                    ii.classList.remove("clicked");
-                    input.value -= 1
-                } else {
-                    let num = input.value
-                    ii.classList.add("clicked");
-                    input.value = Number(num) + Number(1);
-                }
-            });
             document.getElementById("row").appendChild(div1);
             document.getElementById([i]).appendChild(div2);
             document.getElementById("div" + [i]).appendChild(img);
@@ -76,7 +66,6 @@ fetch("./fotot.json")
     })
     .catch((error) => console.log(error));
 
-    
 let div5 = document.createElement("div");
 div5.className = "overlay";
 div5.id = "overlay";
@@ -121,4 +110,29 @@ setTimeout(function() {
 
     buttons.forEach((button) => button.addEventListener("click", open));
     overlay.addEventListener("click", close);
+
+    // ================== Like button class changes =======================
+
+    const likebtn = document.getElementById("like-buton");
+    const input1 = document.getElementById("input1");
+    const zemra = document.getElementById("heart");
+
+    likebtn.addEventListener("click", () => {
+        if (zemra.classList.contains("clicked")) {
+            input1.value = parseInt(input1.value) - 1;
+        } else {
+            input1.value = parseInt(input1.value) + 1;
+        }
+    });
+
+    const btn = document.getElementById("like-buton");
+    const heart = document.getElementById("heart");
+
+    btn.addEventListener("click", () => {
+        if (heart.classList.contains("clicked")) {
+            heart.classList.remove("clicked");
+        } else {
+            heart.classList.add("clicked");
+        }
+    });
 }, 1000);
