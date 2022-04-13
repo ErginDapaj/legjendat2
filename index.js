@@ -51,13 +51,13 @@ fetch("./fotot.json")
             input.className = "input1";
 
             button2.addEventListener("click", () => {
+                let likes = parseInt(input.value)
                 if (ii.classList.contains("clicked")) {
                     ii.classList.remove("clicked");
-                    input.value -= 1
+                    likes -= 1
                 } else {
-                    let num = input.value
                     ii.classList.add("clicked");
-                    input.value = Number(num) + Number(1);
+                    likes = likes + Number(1);
                 }
             });
             document.getElementById("row").appendChild(div1);
