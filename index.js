@@ -36,8 +36,8 @@ fetch("./fotot.json")
 
             let ii = document.createElement("i");
             ii.className = "fa-solid fa-heart";
+            ii.id = "heart";
             ii.id = data.fotot[i].url
-
             let p = document.createElement("p");
             p.className = "num";
             p.id = "num" + [i];
@@ -49,6 +49,7 @@ fetch("./fotot.json")
             input.value = data.fotot[i].likes;
             input.name = "Likes";
             input.className = "input1";
+
 
             button2.addEventListener("click", () => {
                 let likes = parseInt(input.value)
@@ -76,7 +77,7 @@ fetch("./fotot.json")
     })
     .catch((error) => console.log(error));
 
-    
+
 let div5 = document.createElement("div");
 div5.className = "overlay";
 div5.id = "overlay";
@@ -121,4 +122,29 @@ setTimeout(function() {
 
     buttons.forEach((button) => button.addEventListener("click", open));
     overlay.addEventListener("click", close);
+
+    // ================== Like button class changes =======================
+
+    const likebtn = document.getElementById("like-buton");
+    const input1 = document.getElementById("input1");
+    const zemra = document.getElementById("heart");
+
+    likebtn.addEventListener("click", () => {
+        if (zemra.classList.contains("clicked")) {
+            input1.value = parseInt(input1.value) - 1;
+        } else {
+            input1.value = parseInt(input1.value) + 1;
+        }
+    });
+
+    const btn = document.getElementById("like-buton");
+    const heart = document.getElementById("heart");
+
+    btn.addEventListener("click", () => {
+        if (heart.classList.contains("clicked")) {
+            heart.classList.remove("clicked");
+        } else {
+            heart.classList.add("clicked");
+        }
+    });
 }, 1000);
