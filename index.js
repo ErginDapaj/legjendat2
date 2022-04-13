@@ -35,13 +35,9 @@ fetch("./fotot.json")
             button2.className = "like-button";
 
             let ii = document.createElement("i");
-            ii.className = "fa-solid fa-heart"; <<
-            << << < HEAD
-            ii.id = "heart"; ===
-            === =
-            ii.id = data.fotot[i].url >>>
-                >>> > 00 be4102b31d0250c7210383fd041f779c6ca475
-
+            ii.className = "fa-solid fa-heart";
+            ii.id = "heart";
+            ii.id = data.fotot[i].url
             let p = document.createElement("p");
             p.className = "num";
             p.id = "num" + [i];
@@ -54,21 +50,17 @@ fetch("./fotot.json")
             input.name = "Likes";
             input.className = "input1";
 
-            <<
-            << << < HEAD
-                ===
-                === =
-                button2.addEventListener("click", () => {
-                    if (ii.classList.contains("clicked")) {
-                        ii.classList.remove("clicked");
-                        input.value -= 1
-                    } else {
-                        let num = input.value
-                        ii.classList.add("clicked");
-                        input.value = Number(num) + Number(1);
-                    }
-                }); >>>
-            >>> > 00 be4102b31d0250c7210383fd041f779c6ca475
+
+            button2.addEventListener("click", () => {
+                if (ii.classList.contains("clicked")) {
+                    ii.classList.remove("clicked");
+                    input.value -= 1
+                } else {
+                    let num = input.value
+                    ii.classList.add("clicked");
+                    input.value = Number(num) + Number(1);
+                }
+            });
             document.getElementById("row").appendChild(div1);
             document.getElementById([i]).appendChild(div2);
             document.getElementById("div" + [i]).appendChild(img);
