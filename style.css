@@ -192,14 +192,14 @@ button {
 }
 
 .input1 {
-    width: 50px;
+    width: 70px;
     border: none;
     background: none;
     outline: none;
     font-size: 20px;
     pointer-events: none;
     overflow: hidden;
-    transform: translateX(-85px);
+    transform: translateX(-95px);
 }
 
 .likes .num {
@@ -208,7 +208,7 @@ button {
     font-size: 20px;
     font-family: 'Droid Sans', sans-serif;
     font-weight: 400;
-    transform: translate(50px);
+    transform: translate(70px);
 }
 
 .like-button:hover {
