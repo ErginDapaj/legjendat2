@@ -91,7 +91,7 @@ document.getElementById("overlay-inner").appendChild(button3);
 document.getElementById("close").appendChild(ii2);
 
 setTimeout(function() {
-    console.log("Hello World");
+    console.log("Is Working brother");
 
     // ====================== photos pop-up =======================
     const buttons = document.querySelectorAll(".project");
