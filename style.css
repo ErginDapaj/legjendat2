@@ -74,7 +74,7 @@ button {
 
 .project img {
     height: 60vh;
-    width: 100%;
+    width: 60vh;
     object-fit: cover;
     position: relative;
     opacity: 0.9;
@@ -192,6 +192,7 @@ button {
 }
 
 .input1 {
+    color: #35373a;
     width: 70px;
     border: none;
     background: none;
@@ -212,13 +213,12 @@ button {
 }
 
 .like-button:hover {
-    transform: scale(0.5);
+    transform: scale(1.2);
     transition: all .3s ease-in-out;
 }
 
 .clicked {
     color: #f00;
-    transform: scale(1);
 }
 
 @media screen and (max-width: 1000px) {
