@@ -30,13 +30,9 @@ fetch("./fotot.json")
             div4.className = "likes";
             div4.id = "likes" + [i];
 
-            let button2 = document.createElement("button");
-            button2.id = "like-button" + [i];
-            button2.className = "like-button";
-
-            let ii = document.createElement("i");
-            ii.className = "fa-solid fa-heart";
-            ii.id = data.fotot[i].url
+            let span = document.createElement("span");
+            span.id = "like-button" + [i];
+            span.className = "heart";
 
             let p = document.createElement("p");
             p.className = "num";
@@ -50,13 +46,13 @@ fetch("./fotot.json")
             input.name = "Likes";
             input.className = "input1";
 
-            button2.addEventListener("click", () => {
+            span.addEventListener("click", () => {
                  let likes = parseInt(input.value)
-                if (ii.classList.contains("clicked")) {
-                    ii.classList.remove("clicked");
+                if (span.classList.contains("clicked")) {
+                    span.classList.remove("clicked");
                     input.value -= 1
                 } else {
-                    ii.classList.add("clicked");
+                    span.classList.add("clicked");
                     input.value = likes + Number(1);
                 }
             });
@@ -67,8 +63,8 @@ fetch("./fotot.json")
             document.getElementById("grid" + [i]).appendChild(button);
 
             document.getElementById([i]).appendChild(div4);
-            document.getElementById("likes" + [i]).appendChild(button2);
-            document.getElementById("like-button" + [i]).appendChild(ii);
+            document.getElementById("likes" + [i]).appendChild(span);
+            // document.getElementById("like-button" + [i]).appendChild(span);
 
             document.getElementById("likes" + [i]).appendChild(p);
             document.getElementById("num" + [i]).appendChild(input);
