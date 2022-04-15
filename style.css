@@ -181,10 +181,10 @@ button {
 }
 
 .heart {
-   width: 90px;
-   height: 90px;
-   background: url(https://raw.githubusercontent.com/Don-Debug/legjendat2/main/images/img.png) no-repeat;
-   background-position: left;
+    width: 90px;
+    height: 90px;
+    background: url(https://raw.githubusercontent.com/Don-Debug/legjendat2/main/images/img.png) no-repeat;
+    background-position: left;
     background-size: 2900%;
     position: absolute;
     top: 50%;
@@ -193,16 +193,14 @@ button {
     cursor: pointer;
 }
 
-
 .input1 {
     color: #35373a;
-    width: 70px;
+    width: 75px;
     border: none;
     background: none;
     outline: none;
     font-size: 20px;
     pointer-events: none;
-    overflow: hidden;
     transform: translateX(-95px);
 }
 
@@ -224,6 +222,7 @@ button {
     background-position: right;
     animation: animate .8s steps(28) 1;
 }
+
 @keyframes animate {
     0% {
         background-position: left;
@@ -231,7 +230,12 @@ button {
     100% {
         background-position: right;
     }
-    
+}
+
+@media screen and (max-width: 1400px) {
+    .heart {
+        left: 8%;
+    }
 }
 
 @media screen and (max-width: 1000px) {
