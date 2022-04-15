@@ -174,22 +174,26 @@ button {
 
 .likes {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     padding: 10px 20px;
     background-color: rgb(255, 255, 255);
     backdrop-filter: blur(15px);
 }
 
-.like-button {
-    background: none;
-    border: none;
-    outline: none;
-    color: #000;
-    font-size: 25px;
+.heart {
+   width: 90px;
+   height: 90px;
+   background: url(./images/img.png) no-repeat;
+   background-position: left;
+    background-size: 2900%;
+    position: absolute;
+    top: 50%;
+    left: 9%;
+    transform: translate(-50%, -50%);
     cursor: pointer;
-    transition: all .3s ease-in-out;
 }
+
 
 .input1 {
     color: #35373a;
@@ -218,7 +222,17 @@ button {
 }
 
 .clicked {
-    color: #f00;
+    background-position: right;
+    animation: animate .8s steps(28) 1;
+}
+@keyframes animate {
+    0% {
+        background-position: left;
+    }
+    100% {
+        background-position: right;
+    }
+    
 }
 
 @media screen and (max-width: 1000px) {
