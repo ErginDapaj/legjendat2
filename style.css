@@ -188,7 +188,7 @@ button {
     background-size: 2900%;
     position: absolute;
     top: 50%;
-    left: 9%;
+    left: 5%;
     transform: translate(-50%, -50%);
     cursor: pointer;
 }
