@@ -188,6 +188,7 @@ button {
 }
 
 .heart {
+    z-index: 20;
     width: 90px;
     height: 90px;
     background: url(./images/img.png) no-repeat;
