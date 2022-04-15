@@ -184,7 +184,7 @@ button {
 .heart {
     width: 90px;
     height: 90px;
-    background: url(https://raw.githubusercontent.com/Don-Debug/legjendat2/main/images/img.png) no-repeat;
+    background: url(./images/img.png) no-repeat;
     background-position: left;
     background-size: 2900%;
     position: absolute;
