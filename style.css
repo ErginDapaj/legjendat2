@@ -85,8 +85,8 @@ button {
 }
 
 .grid {
-    background-image: linear-gradient(to bottom, rgba(6, 50, 116, 0.7), rgba(148, 148, 148, 0.4));
-    backdrop-filter: blur(5px);
+    background-image: linear-gradient(to bottom, rgba(6, 50, 116, 0.76), rgba(148, 148, 148, 0.336));
+    backdrop-filter: blur(7px);
     height: 100%;
     width: 100%;
     grid-column: -1;
