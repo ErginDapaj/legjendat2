@@ -437,7 +437,8 @@ button {
         align-items: center;
         justify-content: flex-end;
         gap: 0;
-        background-color: #fafafa;
+        background-color: #fafafa9d;
+        backdrop-filter: blur(10px);
         box-shadow: 0 0 10px #000;
         width: 90%;
         height: 70vh;
