@@ -412,8 +412,8 @@ button {
         transform: rotate(45deg) translateX(-8px);
     }
     .navi {
+        transform: translateX(-100%);
         position: fixed;
-        background: rgba(0, 0, 0, 0.329);
         top: 0;
         left: 0;
         bottom: 0;
@@ -423,7 +423,10 @@ button {
         align-items: center;
         z-index: 1000;
         padding: 20px 0;
-        transform: translateX(-100%);
+        transition: .3s all ease-in-out;
+    }
+    .navi-move {
+        transform: translateX(0);
     }
     .drop-down {
         position: fixed;
@@ -433,15 +436,19 @@ button {
         flex-direction: column-reverse;
         align-items: center;
         justify-content: flex-end;
-        gap: 1rem;
-        background-color: #fff;
+        gap: 0;
+        background-color: #fafafa;
+        box-shadow: 0 0 10px #000;
         width: 90%;
         height: 70vh;
-        padding: 3rem;
+        padding: 2rem 0;
+        border-radius: 20px;
         overflow: hidden;
     }
     .drop-down .click {
-        padding: 10px 100%;
+        text-align: center;
+        padding: 10px 0;
+        width: 100%;
         font-size: 22px;
     }
     .drop-down .click:hover {
@@ -449,26 +456,25 @@ button {
     }
     .emrat {
         transform: translateY(-100%);
-        text-align: center;
-        width: 40vh;
+        width: 100%;
         height: 100%;
-        overflow: hidden;
-        top: 8%;
-        right: 7%;
-        position: fixed;
+        overflow: scroll;
+        top: 25%;
+        right: 0;
+        position: absolute;
         border-radius: 10px;
         transition: .5s all ease-in-out;
         display: none;
         z-index: 100;
         list-style: none;
-        padding: 20px;
+        padding: 20px 0;
     }
     .baby {
         transform: translateY(0);
         display: block;
     }
     .emrat li {
-        border: 1px solid #33c7a9;
+        border: 0;
         padding: 15px;
         background-color: #fff;
     }
