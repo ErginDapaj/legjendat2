@@ -7,14 +7,17 @@ customBtn.addEventListener("click", function() {
 });
 
 const shkollat = document.querySelector(".click");
-const emrat = document.querySelector(".emrat")
+const arrow = document.getElementById("down-arrow");
+const emrat = document.querySelector(".emrat");
 
-function opened() {
+function down() {
     if (emrat.classList.contains("baby")) {
+        arrow.classList.remove("rotate");
         emrat.classList.remove("baby");
     } else {
+        arrow.classList.add("rotate");
         emrat.classList.add("baby");
     }
 };
 
-shkollat.addEventListener("click", opened);
+shkollat.addEventListener("click", down);

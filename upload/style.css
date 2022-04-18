@@ -64,6 +64,7 @@ nav .color {
 }
 
 .group .click {
+    background-color: #33c7a9;
     list-style: none;
     padding: 10px 15px;
     cursor: pointer;
@@ -71,8 +72,13 @@ nav .color {
     font-size: 18px;
 }
 
-.group .click:hover {
-    background-color: #33c7a9;
+.click i {
+    color: #434c50;
+    transition: .3s all ease-in-out;
+}
+
+.rotate {
+    transform: rotate(180deg);
 }
 
 .emrat {
@@ -98,7 +104,7 @@ nav .color {
 }
 
 .emrat li {
-    border: 1px solid #33c7a9;
+    border: .5px solid #33c7a9;
     padding: 15px;
     background-color: #fff;
 }

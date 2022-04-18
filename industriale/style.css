@@ -437,8 +437,8 @@ button {
         align-items: center;
         justify-content: flex-end;
         gap: 0;
-        background-color: #fafafa9d;
-        backdrop-filter: blur(10px);
+        background-color: #fafafac2;
+        backdrop-filter: blur(12px);
         box-shadow: 0 0 10px #000;
         width: 90%;
         height: 70vh;
@@ -453,7 +453,7 @@ button {
         font-size: 22px;
     }
     .drop-down .click:hover {
-        background-color: #dddddd;
+        background-color: #aaa;
     }
     .emrat {
         transform: translateY(-100%);
@@ -477,7 +477,7 @@ button {
     .emrat li {
         border: 0;
         padding: 15px;
-        background-color: #fff;
+        background-color: transparent;
     }
     .emrat li:hover {
         background-color: #aaa;
@@ -498,7 +498,7 @@ button {
     }
     .drop-down .upload:hover {
         border: 0;
-        background-color: #dddddd;
+        background-color: #aaa;
     }
     .like-button:hover {
         color: unset;
