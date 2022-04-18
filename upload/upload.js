@@ -6,6 +6,14 @@ customBtn.addEventListener("click", function() {
     realFileBtn.click();
 });
 
+realFileBtn.addEventListener("change", function() {
+    if (realFileBtn.value) {
+        customTxt.innerHTML = realFileBtn.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+    } else {
+        customTxt.innerHTML = "No file choosen";
+    }
+});
+
 const shkollat = document.querySelector(".click");
 const arrow = document.getElementById("down-arrow");
 const emrat = document.querySelector(".emrat");
